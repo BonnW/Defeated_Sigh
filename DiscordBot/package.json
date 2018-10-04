@@ -1,0 +1,8 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "A Discord Bot for my Friends",
+  "main": "bot.js",
+  "author": "BonnW",
+  "dependencies": {}
+}
