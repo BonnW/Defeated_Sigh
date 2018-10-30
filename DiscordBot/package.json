@@ -4,5 +4,8 @@
   "description": "A Discord Bot for my Friends",
   "main": "bot.js",
   "author": "BonnW",
-  "dependencies": {}
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "winston": "^3.1.0"
+  }
 }
