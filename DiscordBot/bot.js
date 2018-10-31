@@ -84,15 +84,78 @@ bot.on('message', msg => {
     if (msg.content === 'who am i?') {
         msg.channel.send(user.username);
     }
-})
+});
 
 
 // RESPONSE FOR "!roll" 
+
 bot.on('message', msg => {
     if (msg.content === '!roll') {
         let rollNum = Math.floor(Math.random() * 101);
         msg.reply(rollNum);
     }
 });
+
+
+// RESPONSE FOR "!coinflip"
+
+bot.on('message', msg => {
+    if (msg.content === '!coinflip') {
+        let num = Math.floor(Math.random() * 101);
+        if (num > 50) {
+            msg.reply('heads');
+            return;
+        }
+        msg.reply('tails');
+    }
+});
+
+
+// RESPONSE FOR "!snap"
+
+bot.on('message', msg => {
+    if (msg.content === '!snap') {
+        let num = Math.floor(Math.random() * 101);
+        if (num > 50) {
+            msg.reply('You were spared')
+        } else {
+            msg.reply(`You've been turned to dust`);
+        }
+    }
+});
+
+
+// START DISCORD GAME
+
+bot.on('message', msg => {
+    if (msg.content === '!startgame') {
+        msg.reply('The Game has Begun');
+    }
+});
+
+// END DISCORD GAME
+
+bot.on('message', msg => {
+    if (msg.content === '!endgame') {
+        msg.reply('The Game is Over');
+    }
+});
+
+// DICE ROLLS
+
+bot.on('message', msg => {
+    if (msg.content === '!rolld6') {
+        let num = Math.floor(Math.random() * 7);
+        msg.reply(num);
+    }
+});
+
+bot.on('message', msg => {
+    if (msg.content === '!rolld12') {
+        let num = Math.floor(Math.random() * 13);
+        msg.reply(num);
+    }
+});
+
 
 bot.login(auth.token);
